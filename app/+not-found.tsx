@@ -1,40 +1,51 @@
-import { Link, Stack } from 'expo-router';
-import { StyleSheet } from 'react-native';
+import { useRouter } from 'expo-router';
+import { Pressable, StyleSheet, Text } from 'react-native';
 
-import { Text, View } from '@/components/Themed';
+import { Screen } from '@/src/shared/components/Screen';
+import { appTheme } from '@/src/shared/constants/theme';
 
 export default function NotFoundScreen() {
-  return (
-    <>
-      <Stack.Screen options={{ title: 'Oops!' }} />
-      <View style={styles.container}>
-        <Text style={styles.title}>This screen doesn't exist.</Text>
+  const router = useRouter();
 
-        <Link href="/" style={styles.link}>
-          <Text style={styles.linkText}>Go to home screen!</Text>
-        </Link>
-      </View>
-    </>
+  return (
+    <Screen>
+      <Text style={styles.title}>That page is not on the menu.</Text>
+      <Text style={styles.body}>
+        The route you opened does not exist. Return to the home feed and keep planning from there.
+      </Text>
+      <Pressable onPress={() => router.replace('/(tabs)/home')} style={({ pressed }) => [styles.button, pressed && styles.pressed]}>
+        <Text style={styles.buttonLabel}>Go home</Text>
+      </Pressable>
+    </Screen>
   );
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
-    padding: 20,
-  },
   title: {
-    fontSize: 20,
-    fontWeight: 'bold',
+    color: appTheme.colors.text,
+    fontFamily: appTheme.fontFamilies.display,
+    fontSize: 36,
+    lineHeight: 42,
   },
-  link: {
-    marginTop: 15,
-    paddingVertical: 15,
+  body: {
+    color: appTheme.colors.textMuted,
+    fontFamily: appTheme.fontFamilies.regular,
+    fontSize: 16,
+    lineHeight: 24,
   },
-  linkText: {
+  button: {
+    alignSelf: 'flex-start',
+    borderRadius: appTheme.radii.pill,
+    backgroundColor: appTheme.colors.primary,
+    paddingHorizontal: appTheme.spacing.lg,
+    paddingVertical: 14,
+  },
+  buttonLabel: {
+    color: appTheme.colors.surfaceElevated,
+    fontFamily: appTheme.fontFamilies.medium,
     fontSize: 14,
-    color: '#2e78b7',
+  },
+  pressed: {
+    opacity: 0.9,
   },
 });

@@ -1,17 +1,17 @@
 {
   "expo": {
-    "name": "nutrichef",
+    "name": "NutriChef",
     "slug": "nutrichef",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
     "scheme": "nutrichef",
-    "userInterfaceStyle": "automatic",
+    "userInterfaceStyle": "light",
     "newArchEnabled": true,
     "splash": {
       "image": "./assets/images/splash-icon.png",
       "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+      "backgroundColor": "#fbf7f2"
     },
     "ios": {
       "supportsTablet": true
@@ -19,10 +19,11 @@
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/adaptive-icon.png",
-        "backgroundColor": "#ffffff"
+        "backgroundColor": "#fbf7f2"
       },
       "edgeToEdgeEnabled": true,
-      "predictiveBackGestureEnabled": false
+      "predictiveBackGestureEnabled": false,
+      "package": "com.druidivine.nutrichef"
     },
     "web": {
       "bundler": "metro",
@@ -34,6 +35,12 @@
     ],
     "experiments": {
       "typedRoutes": true
+    },
+    "extra": {
+      "router": {},
+      "eas": {
+        "projectId": "25d7bdd8-0c0b-4e85-b126-e921cb2cca95"
+      }
     }
   }
 }
