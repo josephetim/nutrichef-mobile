@@ -40,7 +40,7 @@ A recipe discovery and meal planning app designed to help users find meals, plan
 ## 📦 Installation
 
 ```bash
-git clone https://github.com/yourusername/nutrichef-mobile
+git clone https://github.com/josephetim/nutrichef-mobile
 cd nutrichef-mobile
 npm install
 npx expo start
