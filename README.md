@@ -1,4 +1,4 @@
-# NutriChef 🍽
+# NutriChef 
 
 A recipe discovery and meal planning app designed to help users find meals, plan weekly menus, and generate shopping lists.
 
@@ -22,7 +22,7 @@ A recipe discovery and meal planning app designed to help users find meals, plan
 
 ## 📱 Demo
 
-- APK: https://expo.dev/accounts/druidivine/projects/nutrichef/builds/b305c740-8d3a-4639-aee9-cfc4403aeb5c
+- APK: https://drive.google.com/file/d/1hySE9w8J4AoBO6NfPh29BwWH4B01jCfR/view?usp=sharing
 - Video: https://drive.google.com/file/d/1UYU4a1toanvejU6iQ8Y3Z4JEjvwpdfuD/view?usp=sharing
 
 ## 🛠 Tech Stack
